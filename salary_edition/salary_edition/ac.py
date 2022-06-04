@@ -6,6 +6,8 @@ def overtime(employee, date,overtime_days,incentive_days):
 	amt = 0.0
 	overtime_days = float(overtime_days)
 	amt = frappe.get_value('Salary Structure Assignment',{'employee':employee},'base')
+	if amt == None:
+		frappe.throw("Salary Structure Not Assigned To The"+employee)
 	per_day = round((amt/301)*12)
 	ot = round(per_day*(overtime_days*2))
 
