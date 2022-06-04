@@ -4,4 +4,4 @@ Everest Salary Edition
 
 #### License
 
-MIT
+MIT# salary_edition
