@@ -1,7 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "format:{employee}-{MM}",
+ "autoname": "format:{employee}-{MM}-{YY}",
  "creation": "2022-05-24 14:25:25.316904",
  "doctype": "DocType",
  "editable_grid": 1,
@@ -50,7 +50,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2022-06-02 17:14:48.392423",
+ "modified": "2022-06-04 13:49:37.469534",
  "modified_by": "Administrator",
  "module": "Salary Edition",
  "name": "Additional Components",
