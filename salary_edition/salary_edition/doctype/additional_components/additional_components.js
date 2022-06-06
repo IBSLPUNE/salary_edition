@@ -8,18 +8,12 @@ frappe.ui.form.on('Additional Components', {
 	// 		args:{employee: frm.doc.employee, date:frm.doc.date, overtime_days:frm.doc.overtime_days,incentive_days:frm.doc.incentive_days}
 	// 	})
 	// },
-	overtime_days: function(frm){
+	before_save: function(frm){
 	    let otd = frm.doc.overtime_days
-	    if (otd > 6){
-	        let id = otd - 6
+	    if (otd*2 > 6){
+	        let id = otd*2 - 6
 	       frm.set_value('incentive_days',id)
-	       frm.set_value('overtime_days',6)
 	    }
 	    
-	},
-	before_save: function(frm){
-		let int = frm.doc.overtime_days
-		var ot = int/2
-		frm.set_value('overtime_days',ot)
 	}
 });
