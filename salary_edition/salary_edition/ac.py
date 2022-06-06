@@ -24,3 +24,17 @@ def overtime(self, method):
 		})
 	additional_salary.insert()
 	additional_salary.submit()
+
+	incentives = round(per_day*(self.incentives*2))
+	additional_salary = frappe.get_doc({
+		'doctype': 'Additional Salary',
+		'employee': self.employee,
+		'salary_component': 'Incentives',
+		'type': 'Earning',
+		'payroll_date': self.date,
+		'amount': incentives,
+		'overwrite_salary_structure_amount':1,
+		'naming_series': 'HR-ADS-.YY.-.MM.-'
+		})
+	additional_salary.insert()
+	additional_salary.submit()
