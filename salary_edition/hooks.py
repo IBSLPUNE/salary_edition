@@ -111,11 +111,11 @@ app_license = "MIT"
 # 		"on_trash": "method"
 #	}
 # }
-# doc_events = {
-# 	"Salary Slip":{
-# 		"validate":"salary_edition.salary_edition.ac.validate"
-# 	}
-# }
+doc_events = {
+	"Additional Components":{
+		"on_submit":"salary_edition.salary_edition.ac.overtime"
+	}
+}
 
 # Scheduled Tasks
 # ---------------
