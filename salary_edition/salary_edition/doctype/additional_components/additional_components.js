@@ -10,11 +10,16 @@ frappe.ui.form.on('Additional Components', {
 	// },
 	overtime_days: function(frm){
 	    let otd = frm.doc.overtime_days
-	    if (otd > 3){
-	        let id = otd - 3
+	    if (otd > 6){
+	        let id = otd - 6
 	       frm.set_value('incentive_days',id)
-	       frm.set_value('overtime_days',3)
+	       frm.set_value('overtime_days',6)
 	    }
 	    
+	},
+	before_save: function(frm){
+		let int = frm.doc.overtime_days
+		var ot = int/2
+		frm.set_value('overtime_days',ot)
 	}
 });
