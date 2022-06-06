@@ -27,7 +27,7 @@ def overtime(self, method):
 
 	if self.incentive_days != 0.0 :
 
-		incentives = round(per_day*(self.incentive_days*2))
+		incentives = round(per_day*(self.incentive_days))
 		additional_salary = frappe.get_doc({
 			'doctype': 'Additional Salary',
 			'employee': self.employee,
