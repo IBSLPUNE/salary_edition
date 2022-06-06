@@ -2,6 +2,7 @@ import frappe
 from erpnext.payroll.doctype.salary_slip.salary_slip import SalarySlip
 
 
+
 def overtime(self, method):
 	amt = 0.0
 	overtime_days = float(self.overtime_days)
