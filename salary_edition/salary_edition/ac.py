@@ -10,7 +10,7 @@ def overtime(employee, date,overtime_days,incentive_days):
 	amt = frappe.get_value('Salary Structure Assignment',{'employee':employee},'base')
 	if amt == None:
 		frappe.throw("Salary Structure Not Assigned To The"+employee)
-	per_day = (amt/301)*12
+	per_day = (amt/365)*12
 	ot = round(per_day*(overtime_days*2))
 
 	additional_salary= frappe.get_doc({
