@@ -6,7 +6,6 @@ from erpnext.payroll.doctype.salary_slip.salary_slip import SalarySlip
 def overtime(self, method):
 	amt = 0.0
 	overtime_days = float(self.overtime_days)
-	print(overtime_days)
 	amt = frappe.get_value('Salary Structure Assignment',{'employee':self.employee},'base')
 	if amt == None:
 		frappe.throw("Salary Structure Not Assigned To The"+self.employee)
