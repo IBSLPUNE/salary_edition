@@ -2,6 +2,7 @@
 // For license information, please see license.txt
 
 frappe.ui.form.on('Additional Components', {
+
 	// before_submit:function(frm){
 	// 	frappe.call({
 	// 		method:"salary_edition.salary_edition.ac.overtime",
@@ -16,4 +17,4 @@ frappe.ui.form.on('Additional Components', {
 // 	    }
 	    
 // 	}
-// });
+});
