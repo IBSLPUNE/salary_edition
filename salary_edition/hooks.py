@@ -49,7 +49,6 @@ app_license = "MIT"
 
 # Generators
 # ----------
-
 # automatically create page for each record of this doctype
 # website_generators = ["Web Page"]
 
@@ -120,24 +119,32 @@ doc_events = {
 # Scheduled Tasks
 # ---------------
 
-# scheduler_events = {
-# 	"all": [
-# 		"salary_edition.tasks.all"
-# 	],
-# 	"daily": [
-# 		"salary_edition.tasks.daily"
-# 	],
-# 	"hourly": [
-# 		"salary_edition.tasks.hourly"
-# 	],
-# 	"weekly": [
-# 		"salary_edition.tasks.weekly"
-# 	],
-# 	"monthly": [
-# 		"salary_edition.tasks.monthly"
-# 	],
-# }
+# Scheduler_events = {
 
+# 	"all": [
+# 		"salary_edition.salary_edition.ac.bonus"
+# 	]
+# # 	"daily": [
+# # 		"salary_edition.tasks.daily"
+# # 	],
+# # 	"hourly": [
+# # 		"salary_edition.tasks.hourly"
+# # 	],
+# # 	"weekly": [
+# # 		"salary_edition.tasks.weekly"
+# # 	],
+# # 	"monthly": [
+# # 		"salary_edition.salary_edition.ac.bonus"
+# # 	],
+# # }
+# }
+# Scheduler_events = {
+# 	"cron": {
+# 	"* * * * *": [
+# 			"salary_edition.salary_edition.ac.bonus"
+# 	]
+# 	}
+# }
 # Testing
 # -------
 
