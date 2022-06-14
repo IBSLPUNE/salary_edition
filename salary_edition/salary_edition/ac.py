@@ -17,7 +17,7 @@ def overtime(self, method):
 	additional_salary= frappe.get_doc({
 		'doctype': 'Additional Salary',
 		'employee': self.employee,
-		'salary_component':'OverTime',
+		'salary_component':'Over Time',
 		'type':'Earning',
 		'payroll_date': self.date,
 		'amount': ot,
