@@ -30,8 +30,10 @@ def overtime(self, method):
 @frappe.whitelist()
 def bonus(start_date, end_date):
 	employee = frappe.get_list("Employee", pluck='name', filters={'status':'Active','date_of_joining':["<=",start_date]})
-	print(employee)
 	for i in employee:
+		additional_salary = frappe.get_list('Additional Salary', filters={'docstatus':1,'employee':i,'salary_component':'Bonus','payroll_date':["Between",[start_date,end_date]]})
+		if additional_salary:
+			continue
 		total_leave = 0.0
 		# end_date = date(2022,5,26)
 		# start_date = end_date - relativedelta(months=+1)
