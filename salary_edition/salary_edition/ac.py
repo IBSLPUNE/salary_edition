@@ -29,7 +29,8 @@ def overtime(self, method):
 
 @frappe.whitelist()
 def bonus(start_date, end_date):
-	employee = frappe.get_list("Employee", pluck='name', filters={'status':'Active'})
+	employee = frappe.get_list("Employee", pluck='name', filters={'status':'Active','date_of_joining':["<=",start_date]})
+	print(employee)
 	for i in employee:
 		total_leave = 0.0
 		# end_date = date(2022,5,26)
