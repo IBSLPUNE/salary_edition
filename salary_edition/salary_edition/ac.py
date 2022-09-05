@@ -22,8 +22,7 @@ def overtime(self, method):
 		'type':'Earning',
 		'payroll_date': self.date,
 		'amount': ot,
-		'overwrite_salary_structure_amount':1,
-		'naming_series': 'HR-ADS-.YY.-.MM.-',
+	#	'overwrite_salary_structure_amount':1,
 		})
 	additional_salary.insert()
 	additional_salary.submit()
@@ -37,8 +36,7 @@ def overtime(self, method):
 			'type':'Earning',
 			'payroll_date': self.date,
 			'amount': incentive,
-			'overwrite_salary_structure_amount':1,
-			'naming_series': 'HR-ADS-.YY.-.MM.-',
+	#		'overwrite_salary_structure_amount':1,
 			})
 		additional_salary.insert()
 		additional_salary.submit()
@@ -75,8 +73,7 @@ def bonus(start_date, end_date):
 				'type':'Earning',
 				'payroll_date': start_date,
 				'amount': bonus,
-				'overwrite_salary_structure_amount':1,
-				'naming_series': 'HR-ADS-.YY.-.MM.-',
+	#			'overwrite_salary_structure_amount':1,
 				})
 			additional_salary.insert()
 			additional_salary.submit()
